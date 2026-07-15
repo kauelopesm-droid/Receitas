@@ -21,10 +21,16 @@
     --fundo: #FFF6EF;
 }
 
+/* Configurações gerais */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 header {
@@ -42,6 +48,7 @@ header h1 {
 
 header nav {
     text-align: center;
+    margin-top: 15px;
 }
 
 header nav a {
@@ -49,20 +56,22 @@ header nav a {
     font-size: 20px;
     text-decoration: none;
     color: white;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 0 15px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: .3s;
 }
 
 header nav a:hover {
-    background-color: #B84A18;
-    padding: 10px;
-    border-radius: 10px;
-    transition: .5s;
+    background-color: var(--cor6);
 }
 
 main {
     background-color: var(--fundo);
     font-family: 'Roboto';
+    padding: 20px 0;
+    min-height: 100vh;
 }
 
 main article {
@@ -71,12 +80,19 @@ main article {
     width: 95%;
     margin: auto;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.425);
+    padding-bottom: 20px;
 }
 
-main article h1{
+main article h1 {
     font-weight: bolder;
     text-align: center;
     padding: 20px;
+    font-size: 35px;
+}
+
+main article h2 {
+    padding: 20px;
+    font-size: 28px;
 }
 
 img {
@@ -86,13 +102,9 @@ img {
     margin: auto;
 }
 
-main article h2 {
-    padding: 20px;
-}
-
 article ul,
 article ol {
-    padding: 0 35px 20px 55px;
+    padding: 0 40px 20px 60px;
 }
 
 article li {
@@ -106,18 +118,19 @@ article p {
 }
 
 aside {
-    margin: 30px
+    margin: 30px;
 }
 
 aside h3 {
-    background-color: #D95E26;
+    background-color: var(--cor5);
     padding: 10px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    color: white;
 }
 
 aside ul {
-    background-color: #FFB089;
+    background-color: var(--cor3);
     padding: 30px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -140,94 +153,174 @@ footer p a {
     color: white;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    header h1{
-        font-size:48px;
+    header h1 {
+        font-size: 48px;
     }
 
-    header nav a{
-        font-size:18px;
-        margin:0 10px;
+    header nav a {
+        font-size: 18px;
+        margin: 0 8px;
     }
 
-    main article{
-        width:95%;
-    }
-}
-
-@media (max-width:600px){
-
-    header{
-        padding:15px;
+    main {
+        padding: 15px 0;
     }
 
-    header h1{
-        font-size:38px;
+    main article {
+        width: 95%;
     }
 
-    header nav{
-        display:flex;
-        flex-direction:column;
-        gap:12px;
-        margin-top:15px;
+    main article h1 {
+        font-size: 32px;
     }
 
-    header nav a{
-        margin:0;
-        padding:8px;
-        display:block;
-    }
-
-    main article h1{
-        font-size:28px;
-    }
-
-    main article h2{
-        font-size:22px;
-    }
-
-    aside{
-        margin:20px 10px;
-    }
-
-    footer p{
-        font-size:16px;
-    }
-}
-
-@media (max-width:360px){
-
-    header h1{
-        font-size:30px;
-    }
-
-    header nav a{
-        font-size:16px;
-    }
-
-    main article{
-        width:98%;
-    }
-
-    main article h1{
-        font-size:24px;
-    }
-
-    main article h2{
-        font-size:20px;
+    main article h2 {
+        font-size: 24px;
     }
 
     article ul,
-    article ol{
-        padding:0 15px 20px 35px;
+    article ol {
+        padding-left: 45px;
+        padding-right: 25px;
     }
 
-    aside{
-        margin:15px 5px;
+    aside {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
     }
 
-    footer p{
-        font-size:14px;
+    header h1 {
+        font-size: 38px;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    header nav a {
+        font-size: 16px;
+        margin: 0;
+        padding: 8px;
+    }
+
+
+    main article {
+        width: 96%;
+    }
+
+
+    main article h1 {
+        font-size: 27px;
+        padding: 15px;
+    }
+
+
+    main article h2 {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+
+    article ul,
+    article ol {
+        padding-left: 35px;
+        padding-right: 15px;
+    }
+
+
+    article li {
+        font-size: 15px;
+    }
+
+
+    aside {
+        margin: 15px;
+    }
+
+
+    aside ul {
+        padding: 20px;
+    }
+
+
+    footer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+
+    header nav {
+        gap: 3px;
+    }
+
+
+    header nav a {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+
+    main article {
+        width: 98%;
+    }
+
+
+    main article h1 {
+        font-size: 24px;
+    }
+
+
+    main article h2 {
+        font-size: 20px;
+    }
+
+
+    article ul,
+    article ol {
+        padding-left: 25px;
+        padding-right: 10px;
+    }
+
+
+    article li {
+        font-size: 14px;
+    }
+
+
+    aside {
+        margin: 10px;
+    }
+
+
+    aside h3 {
+        font-size: 18px;
+    }
+
+
+    aside ul {
+        padding: 15px;
+    }
+
+
+    footer p {
+        font-size: 14px;
     }
 }
