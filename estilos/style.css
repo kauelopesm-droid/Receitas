@@ -22,7 +22,9 @@
 }
 
 * {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -65,7 +67,8 @@ main {
 
 main article {
     background-color: #fdfaf8;
-    width: 800px;
+    max-width: 800px;
+    width: 95%;
     margin: auto;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.425);
 }
@@ -77,13 +80,29 @@ main article h1{
 }
 
 img {
-    width: 700px;
     display: block;
+    max-width: 100%;
+    height: auto;
     margin: auto;
 }
 
 main article h2 {
     padding: 20px;
+}
+
+article ul,
+article ol {
+    padding: 0 35px 20px 55px;
+}
+
+article li {
+    margin-bottom: 8px;
+    line-height: 1.6em;
+}
+
+article p {
+    padding: 0 20px 20px;
+    line-height: 1.7em;
 }
 
 aside {
@@ -119,4 +138,96 @@ footer p {
 footer p a {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 768px){
+
+    header h1{
+        font-size:48px;
+    }
+
+    header nav a{
+        font-size:18px;
+        margin:0 10px;
+    }
+
+    main article{
+        width:95%;
+    }
+}
+
+@media (max-width:600px){
+
+    header{
+        padding:15px;
+    }
+
+    header h1{
+        font-size:38px;
+    }
+
+    header nav{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        margin-top:15px;
+    }
+
+    header nav a{
+        margin:0;
+        padding:8px;
+        display:block;
+    }
+
+    main article h1{
+        font-size:28px;
+    }
+
+    main article h2{
+        font-size:22px;
+    }
+
+    aside{
+        margin:20px 10px;
+    }
+
+    footer p{
+        font-size:16px;
+    }
+}
+
+@media (max-width:360px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    header nav a{
+        font-size:16px;
+    }
+
+    main article{
+        width:98%;
+    }
+
+    main article h1{
+        font-size:24px;
+    }
+
+    main article h2{
+        font-size:20px;
+    }
+
+    article ul,
+    article ol{
+        padding:0 15px 20px 35px;
+    }
+
+    aside{
+        margin:15px 5px;
+    }
+
+    footer p{
+        font-size:14px;
+    }
 }
