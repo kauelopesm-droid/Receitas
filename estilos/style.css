@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fontes/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fontes/Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+:root {
+    --cor1: #FFF3EB;
+    --cor2: #FFD7C1;
+    --cor3: #FFB089;
+    --cor4: #EE7842;
+    --cor5: #D95E26;
+    --cor6: #B84A18;
+    --cor7: #8E3410;
+    --fundo: #FFF6EF;
+}
+
+* {
+    margin: 0px;
+}
+
+header {
+    background-color: var(--cor4);
+    padding: 20px;
+}
+
+header h1 {
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.445);
+    text-align: center;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav a {
+    font-family: 'Roboto';
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+header nav a:hover {
+    background-color: #B84A18;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+main {
+    background-color: var(--fundo);
+    font-family: 'Roboto';
+}
+
+main article {
+    background-color: #fdfaf8;
+    width: 800px;
+    margin: auto;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.425);
+}
+
+main article h1{
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    width: 700px;
+    display: block;
+    margin: auto;
+}
+
+main article h2 {
+    padding: 20px;
+}
+
+aside {
+    margin: 30px
+}
+
+aside h3 {
+    background-color: #D95E26;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+aside ul {
+    background-color: #FFB089;
+    padding: 30px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+footer {
+    background-color: var(--cor4);
+    padding: 10px;
+}
+
+footer p {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: white;
+}
+
+footer p a {
+    text-decoration: none;
+    color: white;
+}
